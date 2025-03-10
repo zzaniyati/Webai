@@ -1,0 +1,507 @@
+$black:#000;
+$white:#fff;
+$light-black:#353535;
+$gray:#8d8d8d;
+$light-gray:#dadada;
+$purple:#d9aff2;
+$blue:#5fa9ff;
+$medium-black:#222;
+$h1:85px;
+$h2:60px;
+$h3:35px;
+$h4:24px;
+$p:16px;
+$title:18px;
+$sub-p:14px;
+$small-p:12px;
+$robot:"Roboto Mono", monospace;
+
+
+body{
+    background: $black;
+    color: #333;
+    font-family: "Hanken Grotesk", sans-serif;
+    font-size: $p;
+    line-height: 1.2;
+}
+
+///////////global///////////// 
+
+.btn-nav{
+    color: $white;
+    font-family: $robot;
+    font-size: $p;
+    background-color: $medium-black;
+    padding: 10px 10px;
+    border-radius: 3px;
+    border: 1px solid #444;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: 300;
+    display: inline-block;
+    transition: all 0.3s ease-in-out;
+
+    i{
+        display: none;
+        transition: all 0.3s ease-in-out;
+    }
+
+    &:hover{
+        i{
+            display: inline-block;
+        }
+    }
+}
+
+.coman-h2{
+    font-size: $h2;
+    color: $white;
+    line-height: 1.1;
+
+    @media(max-width:768px){
+        font-size: $h3;
+    }
+}
+
+.paragrph{
+    color: $gray;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+///////////global/////////////
+
+
+
+///////////header///////////// 
+
+.nav{
+    align-items: center;
+    padding: 20px;
+    border-bottom: 1px solid #1f1f1f;
+
+    .active{
+        font-size: $h3;
+        color: $white;
+    }
+
+   
+}
+
+.navbar-toggler{
+    background-color: $white;
+    padding: 15px;
+    border-radius: 50%;
+
+    i{
+        color: $black !important;
+    }
+}
+
+
+.offcanvas-body{
+    ul{
+        li{
+            font-family: $robot;
+            font-size: $h4;
+            margin-bottom: 10px;
+        }
+    }
+}
+
+///////////header///////////// 
+
+
+
+///////////hero///////////// 
+
+main{
+    position: relative;
+}
+
+.hero{
+    background: url(../images/hero.png);
+    background-position: center;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    height: 80vh;
+
+    @media(max-width:1400px){
+        background-size: auto;
+        height: 50vh;
+    }
+
+    @media(max-width:900px){
+        background-size: contain;
+    }
+
+    .hero-title{
+        color: $purple;
+        font-size: $sub-p;
+
+        i{
+            margin-right: 5px;
+        }
+    }
+    .hero-heading{
+        font-size: $h1;
+        white-space: pre;
+        color: $white;
+        line-height: 0.8;
+        margin-bottom: 45px;
+        @media(max-width:1400px){
+            white-space: normal;
+            font-size: $h2;
+        }
+
+        @media(max-width:768px){
+            font-size: $h3;
+        }
+    }
+}
+
+
+///////////hero///////////// 
+
+
+
+///////////elements///////////// 
+
+.elements{
+   
+
+    .ele-heading{
+        color: $white;
+        font-family: $robot;
+        font-size: $h4;
+    }
+    
+    .card{
+        background: #161618;
+        border: 1px solid #525257;
+        border-radius: 10px;
+        padding: 15px;
+        height: 100%;
+        .card-header{
+            text-align: center;
+            img{
+                height: 100%;
+            }
+            .mode{
+                mix-blend-mode: color-dodge;
+            }
+        }
+        .card-body{
+            h3{
+                color: $white;
+                font-size: $h3;
+            }
+            .card-content{
+                font-size: $title;
+                color: $light-gray;
+            }
+            .sub-p{
+                font-size: $small-p;
+                color: $light-gray;
+                font-family: $robot;
+            }
+        }
+
+    }
+}
+
+
+///////////elements///////////// 
+
+
+
+///////////protocal///////////// 
+
+.protocal{
+         .container{
+            background-image: url('../images/protocal-bg.png');
+            background-repeat: no-repeat;
+            background-color: $white;
+            background-position: right top;
+            background-size:auto 55%;
+            padding: 50px 25px;
+            border-radius: 10px;
+
+            @media(max-width:991px){
+                background-position: right 35%;
+                background-size:auto 35%;
+            }
+
+            @media(max-width:576px){
+                background-position: right 40%;
+                background-size:auto 35%;
+            }
+
+            .pro-heading{
+                // border-bottom: 1px solid $light-gray;
+            h3{
+                font-family: $robot;
+                font-size: 26px;
+                span{
+                    background: linear-gradient(225deg, $blue, $purple);
+                    color: transparent;
+                    -webkit-text-fill-color: transparent;
+                    background-clip: text;
+                    margin-right: 5px;
+                }
+            }
+        }
+        .coman-h2{
+            color: $black !important;
+        }
+        .mode{
+            padding-block: 60px;
+            mix-blend-mode: hard-light;
+            @media(max-width:991px){
+                display: none;
+            }
+        }
+        .card{
+            max-width: 400px;
+            background-color: $light-black;
+            .card-header{
+                color: $white;
+                font-family: $robot;
+                i{
+                    background: linear-gradient(45deg, $white, $gray);
+                    color: transparent;
+                    background-clip: text;
+                    margin-right: 5px;
+                }
+            }
+            .card-body{
+                pre{
+                    code{
+                        color: $gray;
+                        span{
+                            color: $blue;
+                        }
+                    }
+                }
+                .pink{
+                    color: $purple;
+                }
+            }
+        }
+        .second-card{
+            margin-block: 80px;
+            margin-left: 100px;
+            @media(max-width:991px){
+                margin-left: 0%;
+                margin-block: 30px;
+            }
+        }
+        .border-light{
+            border-bottom: 1px solid $gray;
+        }
+    }
+    .speed{
+        h2{
+            white-space: pre;
+            font-size: $h2;
+            span{
+                background: linear-gradient(225deg, $blue, $purple);
+                color: transparent;
+                -webkit-text-fill-color: transparent;
+                background-clip: text;
+                margin-right: 5px;
+            }
+            @media(max-width:1400px){
+                white-space: normal;
+            }
+            @media(max-width:768px){
+                font-size: $h3;
+            }
+        }
+        .paragrph{
+            white-space: pre;
+            @media(max-width:1400px){
+                white-space: normal;
+            }
+        }
+    }
+    
+}
+
+///////////protocal///////////// 
+
+///////////advancement/////////////
+
+.advancement{
+
+    .container{
+        background: transparent;
+        border: 1px solid $gray;
+    }
+
+    @extend .protocal;
+
+    h3{
+        color: $white;
+    }
+    .speed{
+        padding-block: 60px;
+        color: $white;
+    }
+
+    .feautre{
+       
+        img{
+            border-radius: 10px;
+        }
+       .coman-h2{
+        color: $white !important;
+       }
+
+       .accordion {
+        width: auto;
+        border-radius: 10px;
+        
+    }
+    .accordion-item {
+        border: 1px solid $gray;
+        border-radius: 10px;
+        margin-bottom: 5px;
+        background: $light-black;
+        
+    }
+    .accordion-title {
+        padding: 10px;
+        background: $medium-black;
+        cursor: pointer;
+        border-radius: 10px ;
+        color: $white;
+        padding: 20px;
+    }
+    .accordion-content {
+        display: none;
+        border-radius: 0px 0px 10px 10px;
+        padding: 10px;
+        background: $light-black;
+        color: $light-gray;
+        padding: 30px 20px;
+    }
+    .image-container img {
+        display: block;
+    }
+    }
+   
+}
+
+///////////advancement/////////////
+
+
+///////////protocal-new///////////// 
+
+.protocal-new{
+    @extend .protocal;
+    .container{
+        background: $white;
+        padding: 50px 25px ;
+    }
+
+    .container.no-padding {
+        padding-left: 0;
+        padding-right: 0;
+    }
+    
+    
+    
+
+    h1{
+        font-size: $h1;
+        text-align: center;
+        background: linear-gradient(225deg, $blue, $purple);
+        color: transparent;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+
+        @media(max-width:768px){
+            font-size: $h2;
+        }
+
+        @media(max-width:576px){
+            font-size: $h3;
+        }
+    }
+    
+}
+
+
+///////////protocal-new/////////////
+
+
+
+///////////about///////////// 
+
+.about{
+    @extend .elements;
+
+
+}
+
+
+///////////about/////////////
+
+
+
+///////////footer///////////// 
+
+footer{
+    .container{
+        background-color: $white;
+        .nav-link{
+            font-size: $h3;
+            padding-bottom: 100px ;
+        }
+        span{
+            .border-end{
+                border-right: 1px solid $black !important;
+            }
+        }
+        .footer-heading{
+            font-size: $sub-p;
+            color: $gray;
+            font-family: $robot;
+        }
+        ul{
+            list-style: none;
+            padding-left: 0%;
+            li{
+                font-size: $p;
+                color: $black;
+                font-family: $robot;
+                padding-bottom: 10px;
+            }
+        }
+        .social{
+
+                li{
+                    a{
+                        color: $black ;
+                        &:hover{
+                            color: $gray;
+                        }
+                    }
+                }
+        }
+    }
+}
+
+
+///////////footer///////////// 
